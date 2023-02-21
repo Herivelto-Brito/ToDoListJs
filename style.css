@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    justify-content: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+    width: 50%;
+    min-width: 21.25rem;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.87rem 0;
+    border-radius: .5rem;
+}
+
+.newtask {
+    position: relative;
+    padding: 1.87rem 0.95rem;
+    background-color: #fff;
+    border-radius: .8rem;
+    -webkit-box-shadow: 0 .95rem 1.87rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 .95rem 1.87rem rgba(0, 0, 0, 0.3);
+}
+
+.newtask input {
+    border-radius: .7rem;
+    width: 70%;
+    height: 2.8rem;
+    font-size: 1rem;
+    border: .17rem solid #d1d3d4;
+    padding: 1rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.newtask input:focus {
+    outline: none;
+    border-color: #8052ec;
+}
+
+.newtask button {
+    position: relative;
+    float: right;
+    width: 23%;
+    height: 2.81rem;
+    border-radius: .8rem;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #8052ec;
+    box-shadow: 0 1rem 1rem #a7a5a5;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.newtask button:hover{
+    transform: translateY(-.5rem);
+    transition: .8s;
+}
+.tasks {
+    width: 100%;
+    position: relative;
+    margin-top: 2.5rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0 .95rem 1.87rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 .95rem 1.87rem rgba(0, 0, 0, 0.3);
+    padding: 1.87rem 1.25rem;
+    border-radius: .8rem;
+}
+.task {
+    background: #fff;
+    height: 3.12rem;
+    padding: 5px 10px;
+    border-radius: 0;
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 2px solid #d1d3d4;
+}
+.task span{
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.task button{
+    border: none;
+    background: #8052ec;
+    height: 100%;
+    width: 40px;
+    color: #fff;
+    border-radius: .8rem;
+    cursor: pointer;
+}
+.task button:hover{
+    color: #eb0a0a;
+    transition: all .8s ease;
+    transform: translateY(-.5rem);
+}
+.completed{
+    text-decoration: line-through;
+}
+.links{
+    margin: auto;
+    display: table;
+}
+.links ul{
+    display: flex;
+}
+.links ul li {
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.links ul li a {
+    text-decoration: none;
+}
+
+.links ul li a .fa-brands {
+    font-size: 3em;
+    color: #222;
+}
+
+.links ul li a::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3em;
+    height: 0;
+    overflow: hidden;
+    transition: .8s ease-in-out;
+}
+
+.links ul li:nth-child(1) a::before {
+    content: "\f09b";
+    color: #be00f1;
+    border-bottom: 4px solid #be00f1;
+}
+.links ul li:nth-child(2) a::before {
+    content: "\f08c";
+    color: #1DA1F2;
+    border-bottom: 4px solid #1DA1F2;
+}
+
+.links ul li:hover a::before {
+    height: 100%;
+}
